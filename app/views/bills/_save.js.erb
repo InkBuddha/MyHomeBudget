@@ -1,0 +1,6 @@
+<% if @bill.errors.any? %>
+	$(".errors").append("<%= escape_javascript(render 'error_explanation') %>");
+<% else %>
+	$(".bill-index").html("<%= escape_javascript(render 'index') %>");
+	$("#bill-modal").modal("hide");
+<% end %>

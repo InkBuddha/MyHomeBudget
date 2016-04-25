@@ -1,0 +1,11 @@
+<h1>Les dépenses mensuelles de <em><%= current_user.username %></em></h1>
+
+<div class="bill-index">
+	<%= render "bills/index" %>
+</div>
+
+<br>
+
+<%= link_to ('<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New Bill').html_safe, new_bill_path, class: "btn btn-default", remote: true %>
+
+<div id="bill-modal" class="modal fade"></div>

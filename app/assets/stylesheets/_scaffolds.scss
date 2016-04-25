@@ -1,0 +1,111 @@
+// COLOR PALETTE
+/* colors */
+$yellow: #f6b352;
+$jade: #8CD790;
+$ruby: #a6172d;
+$coral: #DE6449;
+$lightGrey: #E0E3DA;
+$darkGrey: #383A3F;
+
+ // Theme
+$notice: rgba($jade, .8);
+$alert: rgba($ruby, .8);
+$main_color: $coral;
+
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+.notice-message {
+  color: white;
+  padding: 2.5rem;
+  margin: 0;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.flash {
+  position: absolute;
+  top: 0;
+  z-index: 9999;
+}
+
+.btn-main {
+  color: white;
+  background-color: $main_color;
+}
+
+#notice-wrapper {
+    @extend .flash;
+    background: $notice;    
+    p {
+      @extend .notice-message;
+    }
+}
+
+#alert-wrapper {
+    @extend .flash;
+    background: $alert;    
+    p {
+      @extend .notice-message;
+    }
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+tr {
+  td.price { font-weight: bold;}
+  td.name { text-transform: capitalize;}
+}
+
+.navbar-brand { color: $main_color !important;}
+
+.links a { color: $main_color;}
+
